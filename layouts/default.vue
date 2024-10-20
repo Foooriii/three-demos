@@ -1,10 +1,10 @@
 <script setup>
-import Sidebar from '~/compornents/Sidebar.vue'
+import SideBar from '~/compornents/SideBar.vue'
 </script>
 
 <template>
 <div class="wrapper">
-  <Sidebar />
+  <SideBar />
   <div class="contents">
     <slot />
   </div>

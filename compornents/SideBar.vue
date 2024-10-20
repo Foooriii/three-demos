@@ -1,8 +1,8 @@
 <script setup>
 const links = [
-  { path: '/', title: '関数チートシート' },
-  { path: '/step1', title: 'step1：四角形回転（サイズ指定）' },
-  { path: '/step2', title: 'step2：四角形回転（画面全体）' },
+  { path: '/', title: '関数チートシート', isPractice: false },
+  { path: '/step1', title: 'step1：四角形回転（サイズ指定）', isPractice: true },
+  { path: '/step2', title: 'step2：四角形回転（画面全体）', isPractice: false },
 ]
 </script>
 
@@ -12,6 +12,9 @@ const links = [
     <ul>
       <li v-for="(link, i) in links" :key="i">
         <NuxtLink :to="link.path">{{ link.title }}</NuxtLink>
+        <ul v-if="link.isPractice">
+          <li><NuxtLink :to="`${link.path}/practice`">練習</NuxtLink></li>
+        </ul>
       </li>
     </ul>
   </div>
