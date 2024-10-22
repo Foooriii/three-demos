@@ -28,7 +28,7 @@ onMounted(() => {
   // 四角形の箱を作成
   const geometry = new THREE.BoxGeometry(300,500,1000)
   const material = new THREE.MeshNormalMaterial()
-  const box = new THREE.Mesh(geometry,  material)
+  const box = new THREE.Mesh(geometry, material)
   scene.add(box)
 
   // 毎フレーム時に実行されるループイベントです
